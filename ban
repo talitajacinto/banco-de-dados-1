@@ -1,0 +1,23 @@
+create database pesquisa_cliente;
+use pesquisa_cliente;
+create table cliente(
+id_cliente int not null auto_increment,
+nome varchar(100),
+sexo char (1),
+idade int,
+cidade varchar (100),
+primary key (id_cliente)
+);
+
+insert into cliente (nome, sexo, idade, cidade) values
+('Pedro José', 'M', '15', 'Morretes');
+insert into cliente (nome, sexo, idade, cidade) values
+('Maria', 'F', '16', 'Antonina');
+insert into cliente (nome, sexo, idade, cidade) values
+('Carla', 'F', '17', 'Antonina');
+insert into cliente (nome, sexo, idade, cidade) values
+('Marlon', 'M', '19', 'Curitiba');
+
+select * from cliente;
+
+select * from cliente where cidade = 'Antonina';
